@@ -1,0 +1,179 @@
+.btnn {
+  display: inline-block;
+  padding: 13px 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  position: relative;
+  background: transparent;
+  border: 1px solid #313131;
+  font: 12px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-indent: 2px;
+  text-transform: uppercase;
+  transition: color 0.1s linear 0.05s;
+  margin-top: 20px;
+  margin-left: 155px;
+}
+.btnn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #313131;
+  z-index: 1;
+  opacity: 0;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0.2s;
+}
+.btnn::after {
+  transition: border 0.1s linear 0.05s;
+}
+.btnn .btn-inner {
+  position: relative;
+  z-index: 2;
+}
+.btnn:hover {
+  color: #000000;
+  transition: color 0.1s linear 0s;
+}
+.btnn:hover::before {
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  transition: height 0.2s ease, top 0.2s ease, opacity 0s linear 0s;
+}
+.btnn:hover::after {
+  border-color: #dad9d9;
+  transition: border 0.1s linear 0s;
+}
+h1 {
+  margin: 0 auto 15px;
+  max-width: 1000px;
+  font: 300 50px/1.2 "Oswald", sans-serif;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+body {
+  background: #efefef;
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #b6b6b6;
+}
+
+body section {
+  background: white;
+  margin: 60px auto 120px;
+  border-top: 15px solid #313a3d;
+  text-align: center;
+  padding: 50px 0 110px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+body section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+
+form {
+  width: 58.33333%;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #313a3d;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field label + span {
+  font-family: "SSStandard";
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #e8e9ea;
+  width: 80.5%;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #313a3d;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+form .field input[type="text"]#msg,
+form .field textarea#msg {
+  height: 18px;
+  resize: none;
+  -webkit-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+}
+
+form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+}
+
+form .field input[type="text"]:focus + label,
+form .field input[type="text"].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  width: 18%;
+  background: #fd9638;
+  color: #313a3d;
+}
+
+form .field input[type="text"].focused + label,
+form .field textarea.focused + label {
+  color: #fd9638;
+}
+
+form .field:hover label {
+  width: 18%;
+  background: #313a3d;
+  color: white;
+}
